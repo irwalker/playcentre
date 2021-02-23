@@ -1,0 +1,77 @@
+<h2><%= @member.attending_parent %> <b>(<%= @member.parents %>)</b></h2>
+
+<%= link_to('Back', members_path) %>
+
+<table class="table table-striped">
+
+  <tr>
+    <td><strong>Family ID</strong></td>
+    <td><%= @member.family_id %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Attending Parent</strong></td>
+    <td><%= @member.attending_parent %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Date Joined</strong></td>
+    <td><%= @member.date_joined %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Date Left</strong></td>
+    <td><%= @member.date_left %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Comments</strong></td>
+    <td><%= @member.comments %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Parents</strong></td>
+    <td><%= @member.parents %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Parents Email</strong></td>
+    <td><%= @member.parents_email %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Alternate Contact</strong></td>
+    <td><%= @member.alternate_contact %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Mobile</strong></td>
+    <td><%= @member.mobile %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Address</strong></td>
+    <td><%= @member.address %></td>
+  </tr>
+
+  <tr>
+    <td><strong>First Aid Expiry</strong></td>
+    <td><%= @member.first_aid_expiry %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Duty Day</strong></td>
+    <td><%= @member.duty_day %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Staff?</strong></td>
+    <td><%= @member.staff %></td>
+  </tr>
+
+  <tr>
+    <td><strong>Life Member?</strong></td>
+    <td><%= @member.life_member %></td>
+  </tr>
+
+</table>

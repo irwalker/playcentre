@@ -1,1 +1,29 @@
-<h1>Hello World!</h1>
+<div class="my-3">
+  <h1>Playcentre Members</h1>
+</div>
+
+<div class="my-3">
+  <a class="btn btn-primary" href="<%= new_member_path %>">Add Member</a>
+</div>
+
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Family ID</th>
+        <th>Attending Parent</th>
+        <th>Date Joined</th>
+        <th>Date Left</th>
+        <th>Parents</th>
+        <th>Parents Email</th>
+        <th>Alternate Contact</th>
+        <th>Mobile</th>
+        <th>Duty Day</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: 'member', collection: @members %>
+    </tbody>
+  </table>
+</div>

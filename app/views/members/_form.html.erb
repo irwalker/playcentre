@@ -1,0 +1,68 @@
+<%= form_with model: @member do |form| %>
+  <div class="my-2">
+    <%= form.label :family_id, "Family ID", class: "form-label" %>
+    <%= form.text_field :family_id, class: "form-control" %>
+  </div>
+
+  <div class="my-2">
+    <%= form.label :attending_parent, "Attending Parent", class: "form-label" %>
+    <%= form.text_field :attending_parent, class: "form-control" %>
+  </div>
+
+  <div class="row my-2">
+    <div class="col-md-6">
+      <%= form.label :date_joined, "Date Joined", class: "form-label" %>
+      <%= form.date_select :date_joined %>
+    </div>
+    <div class="col-md-6">
+      <%= form.label :date_left, "Date Left", class: "form-label" %>
+      <%= form.date_select :date_left %>
+    </div>
+  </div>
+
+  <div class="row my-2">
+    <div class="col-md-6">
+      <%= form.label :parents, "Parents", class: "form-label" %>
+      <%= form.text_field :parents, class: "form-control" %>
+    </div>
+    <div class="form-check">
+      <%= form.label :parents_email, "Parents Email", class: "form-label" %>
+      <%= form.email_field :parents_email, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="my-2">
+    <%= form.label :alternate_contact, "Alternate Contact", class: "form-label" %>
+    <%= form.text_field :alternate_contact, class: "form-control"%>
+  </div>
+
+  <div class="my-2">
+    <%= form.label :mobile, "Mobile", class: "form-label" %>
+    <%= form.text_field :mobile, class: "form-control" %>
+  </div>
+
+  <div class="my-2">
+    <%= form.label :first_aid_expiry, "First Aid Expiry", class: "form-label" %>
+    <%= form.date_select :first_aid_expiry, class: "form-control" %>
+  </div>
+
+  <div class="my-4">
+    <div class="form-check">
+      <%= form.check_box :staff, class: "form-check-input" %>
+      <%= form.label :staff, "Staff Member?", class: "form-check-label" %>
+    </div>
+    <div class="form-check">
+      <%= form.check_box :life_member, class: "form-check-input" %>
+      <%= form.label :life_member, "Life Member?", class: "form-check-label" %>
+    </div>
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-text">Comments</span>
+      <%= form.text_area :comments, class: "form-control" %>
+  </div>
+
+  <div class="my-2">
+    <%= form.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>
