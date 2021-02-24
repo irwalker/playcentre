@@ -10,10 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_20_061310) do
+ActiveRecord::Schema.define(version: 2021_02_23_084242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "children", force: :cascade do |t|
+    t.bigint "member_id"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.date "date_joined"
+    t.date "date_left"
+    t.date "birthday"
+    t.boolean "monday", default: false
+    t.boolean "tuesday", default: false
+    t.boolean "wednesday", default: false
+    t.boolean "thursday", default: false
+    t.boolean "friday", default: false
+    t.string "gender"
+    t.string "ethnicity"
+    t.string "iwi"
+    t.string "language"
+    t.string "immunisations_received"
+    t.text "emergency_alternative_contact"
+    t.boolean "hepatitis_b", default: false
+    t.boolean "polio", default: false
+    t.boolean "diptheria", default: false
+    t.boolean "tetanus", default: false
+    t.boolean "pertussis", default: false
+    t.boolean "hib", default: false
+    t.boolean "measles", default: false
+    t.boolean "rubella", default: false
+    t.boolean "pneumococcal", default: false
+    t.boolean "allows_photos", default: false
+    t.boolean "excursions", default: false
+    t.boolean "phone_list", default: false
+    t.boolean "assoc_phone_list", default: false
+    t.boolean "sunscreen", default: false
+    t.boolean "insect_repellant", default: false
+    t.boolean "arnica", default: false
+    t.index ["member_id"], name: "index_children_on_member_id"
+  end
 
   create_table "members", force: :cascade do |t|
     t.string "family_id", null: false

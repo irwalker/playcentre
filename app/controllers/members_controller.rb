@@ -5,6 +5,7 @@ class MembersController < ApplicationController
 
   def show
     @member = Member.find(params[:id])
+    @children = @member.children
   end
 
   def new

@@ -12,4 +12,17 @@ FactoryBot.define do
     first_aid_expiry { Date.today + 1.year }
     duty_day { 'Friday' }
   end
+
+  factory :child do
+    first_name { 'Maria' }
+    last_name { 'Walker' }
+    date_joined { Date.new(2020, 5, 1) }
+    birthday { Date.new(2019, 9, 7) }
+    tuesday { true }
+    thursday { true }
+    friday { true }
+    gender { 'F' }
+    ethnicity { 'Indian/European' }
+    language { 'English, Malayalam' }
+  end
 end

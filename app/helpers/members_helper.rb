@@ -5,4 +5,12 @@ module MembersHelper
 
     "#{view_link} #{edit_link}".html_safe
   end
+
+  def child_name(child)
+    "#{child.first_name} #{child.last_name}"
+  end
+
+  def child_actions(member, child)
+    link_to('view', member_child_path(member, child))
+  end
 end
