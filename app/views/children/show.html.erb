@@ -1,3 +1,67 @@
 <div class="my-2">
-  <h2><%= child_name(@child) %></h2>
+  <h2><%= @child.full_name %></h2>
+</div>
+
+<div class="row my-2">
+  <%= link_to('Back', member_path(@member), class: 'float-end') %>
+</div>
+
+<div class="my=2">
+  <table class="table table-striped">
+
+    <tr>
+      <td><strong>Name</strong></td>
+      <td><%= @child.full_name %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Date Joined</strong></td>
+      <td><%= @child.date_joined %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Date Left</strong></td>
+      <td><%= @child.date_left %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Birthday</strong></td>
+      <td><%= @child.birthday %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Gender</strong></td>
+      <td><%= @child.gender %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Days Attending</strong></td>
+      <td><%= @child.days_attending %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Ethnicity</strong></td>
+      <td><%= @child.ethnicity %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Iwi</strong></td>
+      <td><%= @child.iwi %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Language</strong></td>
+      <td><%= @child.language %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Immunisations Received</strong></td>
+      <td><%= @child.immunisations_received %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Emergency Alternate Contact</strong></td>
+      <td><%= @child.emergency_alternative_contact %></td>
+    </tr>
+  </table>
 </div>

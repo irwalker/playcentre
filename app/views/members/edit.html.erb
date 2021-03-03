@@ -1,5 +1,9 @@
-<h2 class="my-2">Edit Member <small> </small></h2>
+<div class="row my-2">
+  <h2 class="my-2">Edit Member <small> </small></h2>
+</div>
 
-<%= link_to('Back', members_path) %>
+<div class="row my-2">
+  <%= link_to('Back', member_path(@member), class: 'float-end') %>
+</div>
 
 <%= render partial: 'form', object: @member %>
